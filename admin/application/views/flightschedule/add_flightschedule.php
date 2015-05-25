@@ -38,6 +38,20 @@
 					</div>
 				</div>
 				
+				<div class="form-group">
+					<div class="row colbox">
+						<div class="col-lg-4 col-sm-4">
+							<label for="add_flight_plane" class="control-label">Flight Plane</label>
+						</div>
+						<div class="col-lg-8 col-sm-8">
+							<input class="form-control" id="add_flight_plane" name="add_flight_plane"
+							placeholder="Flight Plane" type="text" value="<?php echo set_value('add_flight_plane');?>" />
+							
+							<span class="text-danger"><?php echo form_error('add_flight_plane'); ?></span>
+						</div>
+					</div>
+				</div>
+				
 								
 				<div class="form-group">
 					<div class="col-lg-12 col-sm-12 text-center">					

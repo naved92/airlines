@@ -40,11 +40,11 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo site_url('Welcome')?>">Home <span class="sr-only">(current)</span></a></li>
         
-		<li><a href="<?php echo site_url('Welcome/addAccount')?>">Add Location <span class="sr-only">(current)</span></a></li> 
+		<li><a href="<?php echo site_url('Welcome/addAccount')?>">Add Customer <span class="sr-only">(current)</span></a></li> 
 			
-		<li><a href="<?php echo site_url('Welcome/editAccount')?>">Edit Location</a></li>       
-		<li><a href="<?php echo site_url('Welcome/deleteAccount')?>">Delete Location</a></li>       
-		<li><a href="<?php echo site_url('Welcome/updateAccount')?>">Update Location</a></li>       
+		<li><a href="<?php echo site_url('Welcome/editAccount')?>">Edit Customer</a></li>       
+		<li><a href="<?php echo site_url('Welcome/deleteAccount')?>">Delete Customer</a></li>       
+		<li><a href="<?php echo site_url('Welcome/updateAccount')?>">Update A/C</a></li>       
 		
 		</ul>
       
@@ -53,4 +53,9 @@
 </nav>
 
 
-	
+	<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

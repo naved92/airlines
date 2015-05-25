@@ -33,7 +33,7 @@ class login extends CI_Controller{
 				$usr_result = $this->login_model->get_user($username, $password);
 				if ($usr_result>0){						//username pass matched
 					$adminsessiondata = array(
-									'username' => $username,
+									'adminname' => $username,
 									'loginadmin'=> TRUE
 					);
 					$this->session->set_userdata($adminsessiondata);

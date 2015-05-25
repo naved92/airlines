@@ -51,7 +51,7 @@ class register extends CI_Controller{
 				}
 				else{										// add new user
 					$adminsessiondata = array(
-									'username' => $username,
+									'adminname' => $username,
 									'loginadmin'=> TRUE
 					);
 					$this->session->set_userdata($adminsessiondata);

@@ -10,6 +10,13 @@ class login extends CI_Controller{
 	}
 	
 	public function index(){
+	    if($this->session->userdata('loginuser'))
+          		{redirect('home/index');
+				}
+        else   
+		        {
+				
+        
 		$username = $this->input->post("login_username");
 		$password = $this->input->post("login_password");
 		
@@ -25,11 +32,11 @@ class login extends CI_Controller{
 			if ($this->input->post('btn_login') == "Login"){
 				$usr_result = $this->login_model->get_user($username, $password);
 				if ($usr_result>0){						//username pass matched
-					$sessiondata = array(
+					$adminsessiondata = array(
 									'username' => $username,
 									'loginuser'=> TRUE
 					);
-					$this->session->set_userdata($sessiondata);
+					$this->session->set_userdata($adminsessiondata);
 					redirect("home");
 				}
 				else{								// username pass do not match
@@ -38,7 +45,7 @@ class login extends CI_Controller{
 				}
 			}
 		}
-
+    }
 	}
 
 }

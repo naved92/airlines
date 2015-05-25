@@ -15,9 +15,13 @@ class flight extends CI_Controller
 	public function index()
 		{
 		if($this->session->userdata('loginadmin'))
-          		{$data['title']='Flight Home';
+          		{$data['flights']=$this->flight_model->show_all();
+				 $data['title']='Flight Home';
+				 
 				 $this->load->view('templates/header',$data);
+				 $this->load->view('flight/viewall',$data);
 				 $this->load->view('templates/footer');
+				
 				}
         else   
 		        {redirect('login/index');

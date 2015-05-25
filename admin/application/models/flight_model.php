@@ -40,7 +40,13 @@ class flight_model extends CI_Model
 		
        $sql="INSERT INTO FLIGHTS(FLIGHT_CODE ,SOURCE_AIRPORT_ID ,DESTINATION_AIRPORT_ID,DEPART_TIME,ARRIVAL_TIME) VALUES (SEQ_FLIGHT_CODE.nextval,?,?,?,?)";
 	   $query = $this->db->query($sql,array($sid,$did,$depart,$arrive));
-	}
+	} 
+	
+	function show_all()
+		{
+		$query=$this->db->query('SELECT * FROM FLIGHTS ORDER BY FLIGHT_CODE ASC');
+		return $query->result_array();
+		}
 }
 
 ?>

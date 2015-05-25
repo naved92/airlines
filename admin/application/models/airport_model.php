@@ -25,6 +25,12 @@ class airport_model extends CI_Model
        $sql="INSERT INTO AIRPORTS(AIRPORT_CODE ,AIRPORT_NAME ,AIRPORT_LOCATION_ID ,STATUS) VALUES (SEQ_AIR_ID.nextval,?,?,?)";
 	   $query = $this->db->query($sql,array($name,$loc_id,$status));
 	}
+	
+	function show_all()
+		{
+		$query=$this->db->query('SELECT * FROM AIRPORTS ORDER BY AIRPORT_CODE ASC');
+		return $query->result_array();
+		}
 }
 
 ?>

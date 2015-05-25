@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title><?php echo $title?>|| Airlines Management System </title>
 	<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
-</head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ </head>
 
 <body>
 <div class="container">
@@ -95,8 +96,9 @@
 		</ul>
       
       </div><!-- /.navbar-collapse -->
+	  
   </div><!-- /.container-fluid -->
 </nav>
 
 
-	
+  

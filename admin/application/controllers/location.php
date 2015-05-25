@@ -15,8 +15,10 @@ class location extends CI_Controller
 	public function index()
 		{
 		if($this->session->userdata('loginadmin'))
-          		{$data['title']='Location Home';
+          		{$data['locations']=$this->location_model->show_all();
+				 $data['title']='Location Home';
 				 $this->load->view('templates/header',$data);
+				 $this->load->view('location/viewall',$data);
 				 $this->load->view('templates/footer');
 				}
         else   

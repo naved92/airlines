@@ -15,8 +15,11 @@ class airport extends CI_Controller
 	public function index()
 		{
 		if($this->session->userdata('loginadmin'))
-          		{$data['title']='Airport Home';
+          		{$data['airports']=$this->airport_model->show_all();
+				 $data['title']='Airport Home';
+				 
 				 $this->load->view('templates/header',$data);
+				 $this->load->view('airport/viewall',$data);
 				 $this->load->view('templates/footer');
 				}
         else   

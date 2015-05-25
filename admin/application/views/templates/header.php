@@ -83,6 +83,15 @@
           </ul>
         </li>
 		
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Airplane Model<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="<?php echo site_url('airplane_model')?>">Airplane Model Home <span class="sr-only">(current)</span></a></li> 
+		    <li><a href="<?php echo site_url('airplane_model/add_airplane_model')?>">Add Airplane Model</a></li>
+			<!--- <li class="divider"></li> -->
+          </ul>
+        </li>
+		
 		</ul>
       
       </div><!-- /.navbar-collapse -->

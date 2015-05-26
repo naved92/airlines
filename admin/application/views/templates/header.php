@@ -101,6 +101,33 @@
 			<!--- <li class="divider"></li> -->
           </ul>
         </li>
+
+    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Seat Class<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="<?php echo site_url('seat_class')?>">Seat Class Home <span class="sr-only">(current)</span></a></li> 
+        <li><a href="<?php echo site_url('seat_class/add_seat_class')?>">Add Seat Class</a></li>
+      <!--- <li class="divider"></li> -->
+          </ul>
+    </li>
+		
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Seat<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="<?php echo site_url('seat')?>">Seat Home <span class="sr-only">(current)</span></a></li> 
+		    <li><a href="<?php echo site_url('seat/add_seat')?>">Add Seat</a></li>
+			<!--- <li class="divider"></li> -->
+          </ul>
+    </li>
+
+    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fare Type<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="<?php echo site_url('fare_type')?>">Fare Type Home <span class="sr-only">(current)</span></a></li> 
+        <li><a href="<?php echo site_url('fare_type/add_fare_type')?>">Add Fare Type</a></li>
+      <!--- <li class="divider"></li> -->
+          </ul>
+    </li>
 		
 		
 		</ul>

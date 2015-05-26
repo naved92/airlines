@@ -1,5 +1,5 @@
 <?php
-class airplane_model extends CI_Controller
+class fare_type extends CI_Controller
 	{
 	
 	public function __construct()
@@ -9,14 +9,14 @@ class airplane_model extends CI_Controller
 			$this->load->helper(array('form','url','html'));
 		
 			$this->load->database();
-			$this->load->model('airplane_model_model');
+			$this->load->model('fare_type_model');
 				 
 		}
 	public function index()
 		{
 		if($this->session->userdata('loginadmin'))
           		{
-					$data['title']='Airplane Model Home';
+					$data['title']='Fare Type Home';
 					//$data['result'] = $this->show_all();
 					$this->load->view('templates/header',$data);					
 					$this->load->view('templates/footer');
@@ -31,41 +31,43 @@ class airplane_model extends CI_Controller
 			;
 
 	}	
-	public function add_airplane_model(){
+	public function add_fare_type(){
 		if($this->session->userdata('loginadmin')){ 
-			$name = $this->input->post("add_airplane_model_name");					
+			$fare_type = $this->input->post("add_fare_type");	
+			$fare_class = $this->input->post("add_fare_class");				
 			//validations
-			$this->form_validation->set_rules("add_airplane_model_name","Airplane Model Name","trim|required");		
+			$this->form_validation->set_rules("add_fare_type","Fare Type ","trim|required|alpha_dash");
+			$this->form_validation->set_rules("add_fare_class","Fare Class","trim|required|alpha_dash");		
 				
 			//invalid
 			if ($this->form_validation->run()==FALSE){
 				$data['title']='Add airport';
 					$this->load->view('templates/header',$data);
-					$this->load->view('airplane_model/add_airplane_model');				
+					$this->load->view('fare_type/add_fare_type');				
 					$this->load->view('templates/footer');		 				
 			}			
 			else{
-				if ($this->input->post('btn_add_airplane_model') == "Add Airplane Model"){
-					$airplane_model_result = $this->airplane_model_model->check_airplane_model($name);
-					if ($airplane_model_result==1){						//already exists
+				if ($this->input->post('btn_add_fare_type') == "Add Fare Type"){
+					$fare_type_result = $this->fare_type_model->check_fare_type($fare_type,$fare_class);
+					if ($fare_type_result==1){						//already exists
 						$this->session->set_flashdata('msg','<div class="alert alert-danger text-center">
-						Airplane model already exists!</div>');
-						redirect("airplane_model/add_airplane_model");
+						Fare Type already exists!</div>');
+						redirect("fare_type/add_fare_type");
 					}
 					else {
-						$this->airplane_model_model->add_new_airplane_model($name);
+						$this->fare_type_model->add_new_fare_type($fare_type,$fare_class);
 						$this->session->set_flashdata('msg','<div class="alert alert-success text-center">
-						Airplane model '.$name.' added successfully</div>');
-						redirect("airplane_model/index");
+						Fare Type '.$fare_type.' '.$fare_class.' added successfully</div>');
+						redirect("fare_type/index");
 					}
 				}
 			}
 			
 		}	 		
         else   
-		        {
-		        	redirect('login/index');
-				}
+		    {
+		    	redirect('login/index');
+			}
              
 	
 		}

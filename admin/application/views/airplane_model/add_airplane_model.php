@@ -16,7 +16,7 @@
 							<label for="add_airplane_model_Name" class="control-label">Airplane Model Name</label>
 						</div>
 						<div class="col-lg-8 col-sm-8">
-							<input class="form-control" id="add_airplane_model_)name" name="add_airplane_model_name"
+							<input class="form-control" id="add_airplane_model_name" name="add_airplane_model_name"
 							placeholder="Airplane Model Name" type="text" value="<?php echo set_value('add_airplane_model_name');?>" />							
 							<span class="text-danger"><?php echo form_error('add_airplane_model_name'); ?></span>
 						</div>

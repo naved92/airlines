@@ -4,7 +4,7 @@
 <head>
 	<meta charset = "utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Admin Home || Airlines Management System </title>
+	<title><?php echo $title;?>|| Airlines Management System </title>
 	<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -38,13 +38,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-home">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="<?php echo site_url('Welcome')?>">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="<?php echo site_url('home')?>">Home <span class="sr-only">(current)</span></a></li>
         
-		<li><a href="<?php echo site_url('Welcome/addAccount')?>">Add Location <span class="sr-only">(current)</span></a></li> 
+		<li><a href="<?php echo site_url('find_route/index')?>">Find Route <span class="sr-only">(current)</span></a></li> 
 			
-		<li><a href="<?php echo site_url('Welcome/editAccount')?>">Edit Location</a></li>       
-		<li><a href="<?php echo site_url('Welcome/deleteAccount')?>">Delete Location</a></li>       
-		<li><a href="<?php echo site_url('Welcome/updateAccount')?>">Update Location</a></li>       
 		
 		</ul>
       

@@ -11,7 +11,7 @@ class home extends CI_Controller{
 	
 	public function index()
 	{   if($this->session->userdata('loginadmin'))
-          		 { $data['title']='Admin Home';
+          		 { $data['title']='Admin || '.$this->session->userdata('adminname');
 				$this->load->view('templates/header',$data);
 				 $this->load->view('templates/footer');
 				}
